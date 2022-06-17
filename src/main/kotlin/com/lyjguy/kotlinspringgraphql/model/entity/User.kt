@@ -1,5 +1,6 @@
-package com.lyjguy.kotlinspring.model.entity
+package com.lyjguy.kotlinspringgraphql.model.entity
 
+import com.lyjguy.kotlinspringgraphql.model.enum.UserType
 import org.springframework.data.annotation.CreatedDate
 import org.springframework.data.annotation.LastModifiedDate
 import org.springframework.data.jpa.domain.support.AuditingEntityListener
@@ -16,8 +17,12 @@ class User(
     var name: String,
     var email: String,
     var password: String,
+    @Enumerated
+    val userType: UserType,
     @CreatedDate
     var createdAt: LocalDateTime = LocalDateTime.now(),
     @LastModifiedDate
     var updatedAt: LocalDateTime = LocalDateTime.now(),
+    @LastModifiedDate
+    var lastLoginAt: LocalDateTime = LocalDateTime.now(),
 )
