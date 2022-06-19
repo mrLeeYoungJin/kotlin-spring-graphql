@@ -1,0 +1,18 @@
+scalar Date
+
+type Query {
+    getUser(id: ID!): User
+}
+
+type User {
+    id: ID!
+    name: String!
+    email: String!
+    userType: UserType!
+    createdAt: Date
+}
+
+enum UserType {
+    USER
+    ADMIN
+}
