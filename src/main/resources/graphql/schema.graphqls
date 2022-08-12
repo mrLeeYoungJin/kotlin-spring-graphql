@@ -1,4 +1,4 @@
-scalar Date
+scalar DateTime
 
 type Query {
     getUser(id: ID!): User
@@ -9,7 +9,7 @@ type User {
     name: String!
     email: String!
     userType: UserType!
-    createdAt: Date
+    createdAt: DateTime
 }
 
 enum UserType {
