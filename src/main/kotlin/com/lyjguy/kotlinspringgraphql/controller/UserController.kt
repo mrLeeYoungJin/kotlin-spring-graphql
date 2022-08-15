@@ -12,7 +12,7 @@ class UserController(
     private val userService: UserService,
 ) {
 
-    @QueryMapping
+    @QueryMapping("getUser")
     fun getUser(@Argument id: Long): User? {
         return userService.findById(id)
     }
