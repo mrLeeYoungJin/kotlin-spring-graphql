@@ -1,0 +1,12 @@
+### GET request with a header
+POST http://localhost:8080/graphql
+content-type: application/json
+
+{
+  "query": "query { getUser(id: 1) { userType } }"
+}
+
+
+###
+POST http://localhost:8080/graphql
+Accept: application/graphql
